@@ -80,8 +80,6 @@ ytrain <- activitylabels[ytrain]
 
 # 1. Merges the training and the test sets to create one data set.
 
-
-
 # Load the training and test data sets. The values are in scientific notation,
 # so load the data as character strings before converting to numeric.
 
@@ -182,7 +180,7 @@ combined <- select(combined, set, subject, activity, v1:v2)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# From the data set in step 4, creates a second, independent tidy data set 
+# 5. From the data set in step 4, creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject. 
 # Start by removing the 'set' column, then group by the 'activity' and 'subject' 
 # columns, finally calculate mean values for each feature.
@@ -200,3 +198,8 @@ end <- dim(summarized)[2]
 colnames(summarized)[3:end] <- columnnames
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Create a text file of the 'summarized' data frame output (commented out by
+# default)
+
+# write.table(summarized, 'summarizedoutput.txt', row.names = FALSE)
