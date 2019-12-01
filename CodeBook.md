@@ -72,5 +72,3 @@ For a description of the individual features prior to averaging (from the featur
         mean(): Mean value
         
         std(): Standard deviation
-        
-        

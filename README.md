@@ -45,3 +45,4 @@ The following code may be helpful to view the output data.
 data <- read.table('./summarizedoutput.txt', header = TRUE, check.names = FALSE) 
 View(data)
 ```
+
